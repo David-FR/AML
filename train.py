@@ -1,21 +1,22 @@
+#!/usr/bin/env python3
 """
 A run script for training NN model on GTSRB
 """
-
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
+from parameters import *
+from lib.utils import *
 from lib.keras_utils import *
 from lib.OptCarlini import *
 from lib.OptTransform import *
 from lib.RandomTransform import *
-from lib.utils import *
-from parameters import *
 
 # Set training metadata
 LOAD_WEIGHTS = False
 LOAD_WEIGHTS_PATH = './weights.24-0.20.hdf5'
+#TRAIN_FILE_NAME = 'train_extended_75.p' # This needs to be changed with the name of your train.p data file
 TRAIN_FILE_NAME = 'train_extended_75.p'
 
 # Build model. model is a compiled Keras model with last layer being logits.

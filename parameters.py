@@ -16,11 +16,12 @@ import keras.backend as K
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
-from keras.optimizers import SGD
+from tensorflow.keras.optimizers import SGD
 from keras.preprocessing.image import ImageDataGenerator
 from pandas.io.parsers import read_csv
 from scipy import misc
-from tensorflow.contrib.opt import ScipyOptimizerInterface
+#from tensorflow.contrib.opt import ScipyOptimizerInterface
+#from tensorflow import keras
 
 # Set constants (MNIST)
 # NUM_LABELS = 10                             # Number of labels
@@ -47,7 +48,9 @@ L2_LAMBDA = 0.0001                          # Lambda for l2 regularization
 # Path to saved weights
 WEIGTHS_PATH = "./keras_weights/weights_mltscl_dataaug.hdf5"
 # Path to directory containing dataset
-DATA_DIR = "./input_data/"
+#DATA_DIR = "./input_data/"
+DATA_DIR = "/home/dferna3/advml-traffic-sign/input_data/"
+
 
 INPUT_SHAPE = (1, HEIGHT, WIDTH, N_CHANNEL)  # Input shape of model
 IMG_SHAPE = (HEIGHT, WIDTH, N_CHANNEL)

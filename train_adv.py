@@ -16,7 +16,7 @@ from parameters import *
 from tensorflow.python.platform import flags
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
 
 # Specify training set to load from ithin DATA_DIR
 TRAIN_FILE_NAME = 'train_extended_75.p'
